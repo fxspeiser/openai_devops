@@ -1,5 +1,5 @@
 # ruvbot - Devops using OpenAi ChatGPT Model
-This script is the Mac default shell (zsh) port of Reuven Cohen's command-line tool that utilizes OpenAI's GPT-3.5 Turbo to generate shell commands based on user input. 
+This script is the Mac default shell (zsh) port of Reuven Cohen's (ruvnet) command-line tool that utilizes OpenAI's GPT-3.5 Turbo to generate shell commands based on user input. 
 
 ## More details
 This script serves as a valuable tool for server administrators and DevOps professionals who want to simplify their daily tasks and improve their workflow. By leveraging the OpenAI API and ChatGPT model, the script generates shell command suggestions based on user input, allowing users to perform a wide range of operations with ease.
