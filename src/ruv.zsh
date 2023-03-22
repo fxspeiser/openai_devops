@@ -111,18 +111,18 @@ while true; do
     echo "Executing: $suggestion1"
 
 	 if [[ "$suggestion1" != *$'\n'* ]]; then
-	        eval "$suggestion1"
-	      else
-	        echo "Error: Suggestion contains a incosistent formatting, which is not allowed."
-	      fi
-	    elif [ "$choice" -eq "2" ]; then
-	      echo "Executing: $suggestion2"
-	      if [[ "$suggestion2" != *$'\n'* ]]; then
-	        eval "$suggestion2"
-	      else
-	        echo "Error: Suggestion contains a incosistent formatting, which is not allowed."
-	      fi
-	    else
-	      echo "Skipping execution."
-	    fi
-	  done
+	 	eval "$suggestion1"
+	 else
+	 	echo "Error: Suggestion contains a incosistent formatting, which is not allowed."
+	 fi
+	 elif [ "$choice" -eq "2" ]; then
+	 	echo "Executing: $suggestion2"
+	 if [[ "$suggestion2" != *$'\n'* ]]; then
+	 	eval "$suggestion2"
+	  else
+	  	echo "Error: Suggestion contains a incosistent formatting, which is not allowed."
+	  fi
+	  else
+	  	echo "Skipping execution."
+	  fi
+  done

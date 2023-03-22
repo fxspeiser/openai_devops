@@ -1,72 +1,52 @@
 # ruvbot - Devops using OpenAi ChatGPT Model
-This script is a command-line tool that utilizes OpenAI's GPT-3.5 Turbo to generate shell commands based on user input. The script also features a loading animation and provides summaries of command outputs.
+This script is the Mac default shell (zsh) port of Reuven Cohen's command-line tool that utilizes OpenAI's GPT-3.5 Turbo to generate shell commands based on user input. 
 
 ## More details
 This script serves as a valuable tool for server administrators and DevOps professionals who want to simplify their daily tasks and improve their workflow. By leveraging the OpenAI API and ChatGPT model, the script generates shell command suggestions based on user input, allowing users to perform a wide range of operations with ease.
 
-The key advantage of using this script is its ability to understand natural language input and translate it into relevant shell commands. This not only saves time but also reduces the likelihood of human error when performing complex tasks. Moreover, the script provides multiple command options, empowering users to make informed decisions while executing their tasks.
+The key advantage of using this script is its ability to understand natural language input and translate it into relevant shell commands. This not only saves time but also reduces the likelihood of human error when performing complex tasks. Moreover, the script provides multiple command options, empowering users to make informed decisions while executing their tasks. This can help admins and devops professionals with macOS environments manage and maintain their systems with a helpful AI assistant. 
 
 Here's a breakdown of the script:
 
-* Define a show_loading function to display a loading animation.
-* Print a welcome message with an ASCII art logo representing "rUvbot".
 * Define a show_help function that displays usage instructions and script options.
 * Check for the -h or --help arguments to show the help message if needed.
-* Collect user input and save the current working directory.
-* Start the loading animation in the background.
 * Define a get_response function to make an API call to OpenAI, passing the user input and a temperature setting for the GPT-3.5 Turbo model.
 * Make two API calls with different temperature settings and extract the generated commands from the API responses.
-* Stop the background loading animation and clear the loading animation line.
 * Display the generated commands as options for the user to choose from.
 * Prompt the user to choose a command option or cancel.
-* Execute the selected command and store the output in a temporary file.
-* Display the command output and, if there is any output, start the loading message again in the background.
-* Request a summary of the command output from the GPT-3.5 Turbo model by sending another API call.
-* Stop the background loading message and display the summary provided by the model.
-* Remove the temporary output file.
+* Exit the program OR execute the desired command
+* Display the command output and, if there is any output.
+* Stay alive and ask the user for additional instructions. 
 
 ## Install & Usage Instructions:
 
-This script was made for linux or the linux subsystem on windows.
+This script was made for macOS.
 
-Update the OpenAI API Key: Replace <OpenAi_API_Key> in the get_response() function with your actual OpenAI API key. There are two instances where you need to replace this placeholder. The lines are:
+Update the OpenAI API Key: Replace <YOUR API KEY> near the top of the script with your actual OpenAI API key. There are two instances where you need to replace this placeholder. The lines are:
 
-### -H 'Authorization: <OpenAi_API_Key>' \  
-Replace <OpenAi_API_Key> with your API key, like this:
-
-### -H 'Authorization: Bearer sk-yourapikeyhere' \  
-Save the updated script and make it executable. In the terminal, navigate to the directory containing the script and run:
+### API_KEY="<YOUR API KEY>" \  
+Replace <YOUR API KEY> with your API key from OpenAI
 
 ### chmod +x script_name.sh  
+Replace script_name.sh with the actual name of the script. In our case ruv.zsh
+
+### Run the script:
+
+### ./script_name.sh [OPTIONS]   
 Replace script_name.sh with the actual name of the script.
 
-### Run the script with user input:
+### The script will prompt you to describe a system operation to perform
+For instance: 
 
-### ./script_name.sh [OPTIONS] <user_input>  
-Replace script_name.sh with the actual name of the script and <user_input> with your desired input.
+* create a local directory called test 
+* find a network route to www.wall.org   
+* install the express package globally
+* check the IP address of my local machine
+
+The script will provide you with up to two options to select and you can choose to execute one, or type 'quit' to exit. 
 
 ## Available options:
 
 ### -h or --help: Show the help message and exit.  
 For example, to run the script with the user input "create a new directory called test", you would execute the following command:
 
-## Sample Script Usage
-###  ./script_name.sh create a new directory called test
-
-The script will then provide you with two shell command options generated by the GPT-3.5 Turbo model, based on your input. Choose one of the options or cancel the 
-operation. If you proceed, the script will execute the chosen command and provide you with a summary of the command output.
-
-### Networking:
-### ./script_name.sh check the IP address of my local machine
-
-The script will provide shell command options to retrieve the IP address of your local machine.
-
-### NPM:
-### ./script_name.sh install the express package globally
-
-The script will provide shell command options to install the Express package globally using npm.
-
-### Application deployments:
-### ./script_name.sh create a tarball of a directory called my_project
-
-The script will provide shell command options to create a tarball (compressed archive) of a directory named my_project.
