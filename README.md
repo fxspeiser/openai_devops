@@ -24,7 +24,7 @@ This script was made for macOS.
 
 Update the OpenAI API Key: Replace <YOUR API KEY> near the top of the script with your actual OpenAI API key. There are two instances where you need to replace this placeholder. The lines are:
 
-### API_KEY="<YOUR API KEY>" \  
+### API_KEY=\"<YOUR API KEY>\"  
 Replace <YOUR API KEY> with your API key from OpenAI
 
 ### chmod +x script_name.sh  

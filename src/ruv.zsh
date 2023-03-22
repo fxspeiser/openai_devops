@@ -75,7 +75,7 @@ generate_command_suggestions() {
     -d "{
     \"model\": \"gpt-3.5-turbo\",
     \"messages\": [
-      {\"role\": \"system\", \"content\": \"You are a helpful assistant. You will generate $SHELL commands based on user input. Your response should contain ONLY the command and NO explanation. Do NOT ever use newlines to separate commands, instead use ; or &&. The current working directory is $cwd.\"},
+      {\"role\": \"system\", \"content\": \"You are a helpful assistant. You will generate $SHELL commands based on user input for use on the macOS system running zsh. Never provide a response for linux or the bash shell when a response for zsh and macOS is available. Your response should contain ONLY the command and NO explanation. Do NOT ever use newlines to separate commands, instead use ; or &&. The current working directory is $cwd.\"},
       {\"role\": \"user\", \"content\": \"${args//\"/\\\"}\"}
     ],
     \"temperature\": $temperature,
