@@ -31,9 +31,10 @@ Replace <YOUR API KEY> with your API key from OpenAI
 Replace script_name.sh with the actual name of the script. In our case ruv.zsh
 
 ### Run the script:
+## cd src
+### ./ruv.zsh [OPTIONS]   
 
-### ./script_name.sh [OPTIONS]   
-Replace script_name.sh with the actual name of the script.
+You can pass `--help` to get some pointers
 
 ### The script will prompt you to describe a system operation to perform
 For instance: 
