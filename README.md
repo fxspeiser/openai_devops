@@ -38,7 +38,7 @@ Make sure you are in the `src` directory.
   
 ` ./ruv.zsh [OPTIONS]  ` 
 
-You can pass `--help` to get some pointers
+You can pass `--help` to get some pointers if you need inspiration.
 
 ### The script will prompt you to describe a system operation to perform
 For instance: 
