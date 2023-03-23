@@ -32,11 +32,11 @@ Replace script_name.sh with the actual name of the script. In our case ruv.zsh
 
 ### Run the script:
 
-## cd src
+`cd src`
 
 Make sure you are in the `src` directory. 
   
-## ./ruv.zsh [OPTIONS]   
+` ./ruv.zsh [OPTIONS]  ` 
 
 You can pass `--help` to get some pointers
 
